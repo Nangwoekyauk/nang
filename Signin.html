@@ -1,0 +1,155 @@
+    
+   <!DOCTYPE HTML>
+<HTML>
+    <head>
+    <TITLE></TITLE>
+    <style>
+        ::placeholder {
+            font-size: 1em;
+            padding: 3px;
+            }
+
+        body{
+            font-family: Comic Sans MS;
+            
+            
+        
+        }
+       
+        .Head{
+            background-color: #186871;
+            height:50px;
+            opacity: 0.6;
+            
+        }
+        .img{
+            margin-top: 150px;
+            
+            
+        }
+        .img,.Box{
+            float:left;
+        }
+        .Box{
+            
+            background-color:aliceblue;
+            border: none;
+            width:500px;
+            text-align: center;
+            margin-top:150px;
+            margin-left: 100px;
+        
+ 
+        
+            box-shadow: 0 5px px rgba(0,0,0.1,0);
+            opacity: 0.6;
+             border-radius: 5px;
+             letter-spacing: 0.5px;
+              
+      }
+        .box_diff{
+            margin-top: 20px;
+            height:30px;
+            width: 325px;
+            border:none;
+            outline: none;
+             border-radius: 5px;
+            box-shadow: 1px 1px 2px black; 
+            padding: 3px 10px;
+            letter-spacing: 0.5px;
+           
+         
+        }
+        .SignIn_button{
+            border:none;
+            outline: none;
+            margin-bottom: 20px;
+             margin-top: 20px;
+           padding:10px 152px;
+            background-color: #186871;
+            color: aliceblue;
+            border-radius: 5px;
+            letter-spacing: 0.5px;
+         
+            
+        }
+        .SignIn_button:hover{
+            cursor:pointer;
+            background:#186871;
+            color:black;
+        
+        }
+       
+       
+        span{
+                position: absolute;
+                 transform: translate(-170%,110%);
+           
+            
+            cursor:pointer;
+        }
+        .fa{
+            font-size: 20px;
+            color:#7a797e;
+        }
+        #hidden1{
+           display: none;
+        }
+        .eye{
+            position: absolute;
+            transform: translate(-170%,170%);
+        }
+         
+       
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+</head>
+<body>
+    <div class="Head">
+        
+    </div>
+    <div class="img">
+        <img src="SignIn.png" >
+    </div>
+    <div class="Box">
+        
+        <h2>Please Fill Your Information</h2>
+    
+      <input type="text" placeholder="E-mail" class="box_diff" >
+    <br>
+        <div>
+    <input type="password" placeholder="Password" class="box_diff" id="myInput">
+        <span  onclick="myFunction()">
+            <i class="fa fa-eye eye" id="hidden1"></i>
+              <i class="fa fa-eye-slash eye" id="hidden2" ></i>
+        
+        </span>
+    </div>
+        <input type="button" value="Sign In" class="SignIn_button" >
+       
+    </div>
+    <script>
+        function myFunction(){
+            var x=document.getElementById("myInput");
+            var y=document.getElementById("hidden1");
+            var z=document.getElementById("hidden2");
+            
+            if(x.type === 'password'){
+                x.type="text";
+                y.style.display="grid";
+                z.style.display="none";
+            }
+            else{
+                 x.type="password";
+                y.style.display="none";
+                z.style.display="block";
+            }
+            
+        }
+        
+    </script>
+        
+        
+</body>
+</HTML>
